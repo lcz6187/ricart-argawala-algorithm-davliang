@@ -1,0 +1,38 @@
+[project]
+name = "cs425-ra-fun"
+version = "0.1.0"
+description = "GUI Simulator for the Ricart-Agarwala Algorithm for Mutual Exclusion presented in CS425 at UIUC Spring Semester 2025."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "loguru>=0.7.3",
+    "matplotlib>=3.9.4",
+    "networkx>=3.2.1",
+    "numpy>=2.0.2",
+    "pyside6>=6.9.0",
+    "rich>=14.0.0",
+    "ttkthemes>=3.2.2",
+    "typing-extensions>=4.13.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.5",
+    "types-networkx>=3.4.2.20250319",
+    "types-ttkthemes>=3.2.4.6",
+]
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
